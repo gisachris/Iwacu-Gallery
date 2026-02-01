@@ -1,0 +1,16 @@
+name: Move PR to In Review
+
+on:
+    pull_request: 
+        types: [opened, ready_for_review]
+
+jobs:
+    move-to-review:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Move Pull Request to 'InReview'
+              uses: gisachris/iwacu-gallery@v1
+              with:
+                project: "Iwacu Gallery Project"
+                column: "InReview"
+                repo-token: ${{secrets.PROJECT_TOKEN}}
