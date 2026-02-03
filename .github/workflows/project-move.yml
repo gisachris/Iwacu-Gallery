@@ -9,7 +9,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Move Pull Request to 'InReview'
-              uses: gisachris/iwacu-gallery@v1
+              uses: gisachris/iwacu-gallery@main
               with:
                 project: "Iwacu Gallery Project"
                 column: "InReview"
